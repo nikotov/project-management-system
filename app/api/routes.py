@@ -32,3 +32,11 @@ def create_project(body: ProjectCreate, service: ProjectService = Depends(get_pr
         return ProjectOut(id = project.id, name = project.name)
     except Exception as e:
         raise to_http(e)
+    
+# TO-DO: GET /projects
+# TO-DO: GET /projects/{project_id}
+# @router.get('/projects/{project_id}', response_model=ProjectOut)
+
+# TO-DO POST /projects/{project_id}/tasks
+# TO-DO GET /projects/{project_id}/tasks
+# TO-DO DELETE /tasks/{task_id}
